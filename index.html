@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Formulário de login: não contém lógica de autenticação real,
+         apenas validações locais para demonstração. -->
+    <form id="form-login">
+        <h1>Login</h1>
+        <!-- Campo de e-mail do usuário (obrigatório) -->
+        <label for="email">E-mail:
+            <input
+                type="email"
+                class="inputs_login"
+                id="email"
+                placeholder="Informe seu e-mail"
+                required
+                autocomplete="username"
+            >
+        </label>
+
+        <!-- Campo de senha (obrigatório) -->
+        <label for="senha">Senha:
+            <input
+                type="password"
+                class="inputs_login"
+                id="senha"
+                placeholder="Informe sua senha"
+                required
+                autocomplete="current-password"
+            >
+        </label>
+        <br/>
+        <button type="submit">Entrar</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+    <!-- Espaço para exibir mensagens de erro (credenciais inválidas) -->
+    <div id="msg_erro" aria-live="polite"></div>
+
+    <script src="login.js"></script>
+</body>
+</html>

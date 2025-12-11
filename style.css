@@ -1,0 +1,186 @@
+/* ======= RESET ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ======= FUNDO PADRÃO ======= */
+body {
+    background: #1b1e24;
+    color: #e4e4e4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* ======= CAIXAS (FORMULÁRIOS / ÁREAS GLASS) ======= */
+form#form-login,
+.container {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 25px;
+    width: 330px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* ======= TÍTULOS ======= */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* ======= INPUTS DO LOGIN E DO SISTEMA ======= */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #7d7d7d;
+    padding: 8px 4px;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 25px;
+    transition: 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid #fff;
+}
+
+/* ======= BOTÕES GERAIS ======= */
+button {
+    padding: 10px;
+    background: #394b67;        /* azul escuro */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #4c6386;
+}
+
+button[type="reset"] {
+    background: #2d3542;
+}
+
+button[type="reset"]:hover {
+    background: #3c4658;
+}
+
+/* ======= ERRO DE LOGIN ======= */
+#msg_erro {
+    margin-top: 15px;
+    font-size: 14px;
+}
+.botoes_cadastro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 70%;
+}
+
+/* ======= ÁREA DO SISTEMA ======= */
+
+.cadastroLivro {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 180px;
+    padding: 15px;
+    
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+#nomeLivro, #codigoLivro {
+    margin-bottom: 15px;
+     background: rgba(255, 255, 255, 0.04);
+}
+#lista {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 70%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+#lista p {
+    background: rgba(255,255,255,0.06);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Botões dentro da lista (editar/excluir) */
+#lista button {
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+/* ===== MODAIS ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(255,255,255,0.14);
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.16);
+    text-align: center;
+    color: #fff;
+}
+
+.modal input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+}
+
+.modal-buttons button {
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+button.cancel {
+    background: #444;
+}
+button.cancel:hover {
+    background: #555;
+}

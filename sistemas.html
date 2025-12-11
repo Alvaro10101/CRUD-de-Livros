@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Livros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Cadastro de Livros</h1>
+    
+    <!-- Campos para cadastro de livro: nome e código -->
+    <div class="cadastroLivro">
+        <input type="text" id="nomeLivro" placeholder="Nome do livro"><br><br>
+        <input type="text" id="codigoLivro" placeholder="Código do livro"><br><br>
+    </div>
+
+    <!-- Botões: cadastrar o livro (salva em localStorage) e listar todos -->
+    <div class="botoes_cadastro">
+
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="listar()">Listar Todos</button>
+    </div>
+
+    <h2>Livros cadastrados:</h2>
+    <div id="lista"></div>
+
+    <!-- MODAL DE EDIÇÃO -->
+        <div id="modal-editar" class="modal">
+            <div class="modal-content">
+                <h3>Editar Livro</h3>
+    
+                <label>Nome:</label>
+                <input type="text" id="editNome">
+    
+                <label>Código:</label>
+                <input type="text" id="editCodigo">
+    
+                <div class="modal-buttons">
+                    <button onclick="salvarEdicao()">Salvar</button>
+                    <button class="cancel" onclick="fecharEditar()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- MODAL DE CONFIRMAÇÃO DE EXCLUSÃO -->
+        <div id="modal-excluir" class="modal">
+            <div class="modal-content">
+                <h3>Excluir Livro</h3>
+                <p>Tem certeza que deseja excluir este livro?</p>
+    
+                <div class="modal-buttons">
+                    <button onclick="confirmarExclusao()">Excluir</button>
+                    <button class="cancel" onclick="fecharExcluir()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+    <script src="sistema.js"></script>       
+
+</body>
+
+</html>
